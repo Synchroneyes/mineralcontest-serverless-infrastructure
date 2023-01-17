@@ -21,6 +21,9 @@ jobs:
           aws-region: ${{ secrets.AWS_CODEDEPLOY_REGION }}
 
       - name: Push to CodeCommit
+        shell: bash
         run: |
-          git remote add codecommit https://git-codecommit.${{ secrets.AWS_CODEDEPLOY_REGION }}.amazonaws.com/v1/repos/${{ secrets.AWS_CODEDEPLOY_REPO_NAME}}
-          git push origin main
+          mkdir .ssh && cd .ssh && echo "${{ secrets.SSH_PRIVATE_KEY }}" > id_rsa && chmod 600 id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > config && chmod 600 config
+          git remote add codecommit https://git-codecommit.${{ secrets.AWS_CODEDEPLOY_REGION }}.amazonaws.com/v1/repos/${{ secrets.AWS_CODEDEPLOY_REPO_NAME }}
+          git push codecommit master --force
