@@ -22,5 +22,5 @@ jobs:
 
       - name: Push to CodeCommit
         run: |
-          git remote set-url origin codecommit::${{ secrets.AWS_CODEDEPLOY_REGION }}://${{ secrets.AWS_CODEDEPLOY_REPO_NAME}}
+          git remote set-url origin https://git-codecommit.${{ secrets.AWS_CODEDEPLOY_REGION }}.amazonaws.com/v1/repos/${{ secrets.AWS_CODEDEPLOY_REPO_NAME}}
           git push origin main
