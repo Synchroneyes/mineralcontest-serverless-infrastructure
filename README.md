@@ -1,0 +1,1 @@
+# mineralcontest-serverless-infrastructure
