@@ -1,21 +1,151 @@
 swagger: "2.0"
 info:
   version: "1.0"
-  title: "Hello World API"
+  title: "Mineral Contest Serverless API" 
 paths:
-  /hello/{user}:
+  /maps/:
     get:
-      description: Returns a greeting to the user!
-      parameters:
-        - name: user
-          in: path
-          type: string
-          required: true
-          description: The name of the user to greet.
+      description: List all the available maps
       responses:
         200:
-          description: Returns the greeting.
+          description: Returns the list of available maps.
           schema:
-            type: string
-        400:
-          description: Invalid characters in "user" were provided.
+            type: array
+            items:
+              type: object
+              properties:
+                map-name:
+                  type: string
+                  example: Egypt
+                description:
+                  type: string
+                  example: This world is a copy of Egypt.
+                author:
+                  type: string
+                  example: Pgjgj
+                download-url:
+                  type: string
+                  example: https://download-url.com/egypt.zip
+                map-images:
+                  type: array
+                  items:
+                    type: string
+                    example: [https://download-url.com/egypt/bg1.jpg, https://download-url.com/egypt/bg2.jpg]
+    post:
+      description: Add a new map
+      parameters:
+        - name: world_name
+          in: header
+          type: string
+          description: The name of the world to upload
+          required: true
+        - name: world_description
+          in: header
+          type: string
+          description: The description of the world to upload
+          required: true
+        - name: world_images
+          in: header
+          type: string
+          format: binary
+          description: Images that illustrate the map, at least one image is required
+          required: true
+        - name: world_file
+          in: header
+          type: string
+          format: binary
+          description: ZIP archive of the created map
+          required: true
+        - name: user_key
+          in: header
+          type: string
+          description: User API key to perform the action
+          required: true
+      responses:
+        200:
+          description: Returns the created map 
+          schema:
+            type: object
+            properties:
+              map-name:
+                type: string
+                example: Egypt
+              description:
+                type: string
+                example: This world is a copy of Egypt.
+              author:
+                type: string
+                example: Pgjgj
+              download-url:
+                type: string
+                example: https://download-url.com/egypt.zip
+              map-images:
+                type: array
+                items:
+                  type: string
+                  example: [https://download-url.com/egypt/bg1.jpg, https://download-url.com/egypt/bg2.jpg]
+    put:
+      description: Update the given map
+      parameters:
+        - name: map_id
+          in: header
+          type: string
+          required: true
+        - name: user_key
+          in: header
+          type: string
+          description: User API key to perform the action
+          required: true
+        - name: world_name
+          in: header
+          type: string
+          description: The name of the world to upload
+          required: false
+        - name: world_description
+          in: header
+          type: string
+          description: The description of the world to upload
+          required: false
+        - name: world_file
+          in: header
+          type: string
+          format: binary
+          description: ZIP archive of the created map
+          required: false
+        - name: world_images
+          in: header
+          type: string
+          format: binary
+          description: Images that illustrate the map, at least one image is required
+          required: false
+      responses:
+        200:
+          description: Returns the updated map 
+          schema:
+            type: object
+            properties:
+              map-name:
+                type: string
+                example: Egypt
+              description:
+                type: string
+                example: This world is a copy of Egypt.
+              author:
+                type: string
+                example: Pgjgj
+              download-url:
+                type: string
+                example: https://download-url.com/egypt.zip
+              map-images:
+                type: array
+                items:
+                  type: string
+                  example: [https://download-url.com/egypt/bg1.jpg, https://download-url.com/egypt/bg2.jpg]
+
+        
+
+        
+
+               
+
+
