@@ -16,6 +16,14 @@ resource "aws_lambda_function" "this" {
   ]
 }
 
+resource "aws_lambda_permission" "api-gateway-invoke-lambda" {
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.this.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${var.api_gateway_arn}/*/*"
+}
+
 resource "aws_iam_role" "this" {
   name = "iam_for_lambda_${var.file_name}"
 

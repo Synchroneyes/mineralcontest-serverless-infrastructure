@@ -36,3 +36,8 @@ variable "function_timeout" {
 variable "function_environment_variables" {
   default = {}
 }
+
+variable "api_gateway_arn" {
+  type        = string
+  description = "ARN of the api gateway to use"
+}
