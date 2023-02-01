@@ -7,3 +7,9 @@ output "cognito_client_secret" {
   description = "Secret of the cognito client"
   value       = aws_cognito_user_pool_client.this.client_secret
 }
+
+output "cognito_client_id" {
+  description = "ID of the cognito client"
+  value       = aws_cognito_user_pool_client.this.id
+}
+

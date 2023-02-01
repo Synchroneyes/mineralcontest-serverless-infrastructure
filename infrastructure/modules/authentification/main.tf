@@ -31,7 +31,9 @@ resource "aws_cognito_user_pool" "this" {
 resource "aws_cognito_user_pool_client" "this" {
   name            = var.cognito_client_name
   user_pool_id    = aws_cognito_user_pool.this.id
-  generate_secret = true
+  generate_secret = false
+
+  explicit_auth_flows = ["USER_PASSWORD_AUTH"]
 
   callback_urls    = var.cognito_client_callback_urls
   write_attributes = var.cognito_client_write_attributes

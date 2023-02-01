@@ -8,6 +8,11 @@ variable "file_path" {
   description = "Path of the file to create the lambda from"
 }
 
+variable "file_name" {
+  type        = string
+  description = "name of the file to create the lambda from"
+}
+
 variable "function_handler" {
   type        = string
   description = "Name of the lambda function's entry function"
@@ -26,4 +31,8 @@ variable "function_name" {
 variable "function_timeout" {
   type        = number
   description = "Timeout to use for the function"
+}
+
+variable "function_environment_variables" {
+  default = {}
 }
