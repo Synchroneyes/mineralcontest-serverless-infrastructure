@@ -1,4 +1,4 @@
-resource "aws_api_gateway_rest_api" "name" {
+resource "aws_api_gateway_rest_api" "this" {
   body = data.template_file.swagger.rendered
   name = "test-swagger-apigateway"
 
@@ -13,3 +13,4 @@ data "template_file" "swagger" {
   }
 
 }
+

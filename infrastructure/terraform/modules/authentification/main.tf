@@ -39,3 +39,4 @@ resource "aws_cognito_user_pool_client" "this" {
   write_attributes = var.cognito_client_write_attributes
   read_attributes  = var.cognito_client_read_attributes
 }
+
