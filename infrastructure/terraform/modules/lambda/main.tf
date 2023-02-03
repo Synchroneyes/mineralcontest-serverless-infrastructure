@@ -1,3 +1,4 @@
+#tfsec:ignore:aws-lambda-enable-tracing
 resource "aws_lambda_function" "this" {
   filename                       = "${var.file_path}/${var.file_name}.zip"
   function_name                  = var.function_name
@@ -8,10 +9,10 @@ resource "aws_lambda_function" "this" {
   role                           = aws_iam_role.this.arn
   reserved_concurrent_executions = var.function_concurrent_excecution
 
+
   #checkov:skip=CKV_AWS_50:No use of X-RAY
   #checkov:skip=CKV_AWS_272:No use of code signing
   #checkov:skip=CKV_AWS_116:No need for a DLQ
-  #tfsec:ignore:aws-lambda-enable-tracing
 
   # TODO
   #checkov:skip=CKV_AWS_173:No use of encryption for now
