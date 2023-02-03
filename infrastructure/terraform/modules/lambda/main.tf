@@ -1,11 +1,20 @@
 resource "aws_lambda_function" "this" {
-  filename         = "${var.file_path}/${var.file_name}.zip"
-  function_name    = var.function_name
-  handler          = "${split(".", var.file_name)[0]}.${var.function_handler}"
-  runtime          = var.function_runtime
-  source_code_hash = filesha256("${var.file_path}/${var.file_name}")
-  timeout          = var.function_timeout
-  role             = aws_iam_role.this.arn
+  filename                       = "${var.file_path}/${var.file_name}.zip"
+  function_name                  = var.function_name
+  handler                        = "${split(".", var.file_name)[0]}.${var.function_handler}"
+  runtime                        = var.function_runtime
+  source_code_hash               = filesha256("${var.file_path}/${var.file_name}")
+  timeout                        = var.function_timeout
+  role                           = aws_iam_role.this.arn
+  reserved_concurrent_executions = var.function_concurrent_excecution
+
+  #checkov:skip=CKV_AWS_50:No use of X-RAY
+  #checkov:skip=CKV_AWS_272:No use of code signing
+  #checkov:skip=CKV_AWS_116:No need for a DLQ
+
+  # TODO
+  #checkov:skip=CKV_AWS_173:No use of encryption for now
+  #checkov:skip=CKV_AWS_117:lambda_vpc No Need for now, might need later
 
   environment {
     variables = var.function_environment_variables
@@ -66,4 +75,3 @@ resource "null_resource" "clear_zip" {
     command = "rm ${var.file_path}/${var.file_name}.zip"
   }
 }
-

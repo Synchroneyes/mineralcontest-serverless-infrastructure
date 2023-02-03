@@ -2,6 +2,10 @@ resource "aws_api_gateway_rest_api" "this" {
   body = data.template_file.swagger.rendered
   name = "test-swagger-apigateway"
 
+  lifecycle {
+    create_before_destroy = true
+  }
+
 }
 
 data "template_file" "swagger" {
