@@ -42,7 +42,3 @@ variable "api_gateway_arn" {
   description = "ARN of the api gateway to use"
 }
 
-variable "function_concurrent_excecution" {
-  type        = number
-  description = "Amount of capacity to allocate. Must be greater than or equal to 1"
-}

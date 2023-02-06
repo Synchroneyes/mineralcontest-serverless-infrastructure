@@ -1,13 +1,12 @@
 #tfsec:ignore:aws-lambda-enable-tracing
 resource "aws_lambda_function" "this" {
-  filename                       = "${var.file_path}/${var.file_name}.zip"
-  function_name                  = var.function_name
-  handler                        = "${split(".", var.file_name)[0]}.${var.function_handler}"
-  runtime                        = var.function_runtime
-  source_code_hash               = filesha256("${var.file_path}/${var.file_name}")
-  timeout                        = var.function_timeout
-  role                           = aws_iam_role.this.arn
-  reserved_concurrent_executions = var.function_concurrent_excecution
+  filename         = "${var.file_path}/${var.file_name}.zip"
+  function_name    = var.function_name
+  handler          = "${split(".", var.file_name)[0]}.${var.function_handler}"
+  runtime          = var.function_runtime
+  source_code_hash = filesha256("${var.file_path}/${var.file_name}")
+  timeout          = var.function_timeout
+  role             = aws_iam_role.this.arn
 
 
   #checkov:skip=CKV_AWS_50:No use of X-RAY
