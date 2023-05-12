@@ -9,7 +9,7 @@ def lambda_handler(event, context):
         response = client.initiate_auth(
             AuthFlow='USER_PASSWORD_AUTH',
             AuthParameters={
-                'USERNAME': event['email'],
+                'USERNAME': event['username'],
                 'PASSWORD': event['password'],
             },
             ClientId=os.environ['COGNITO_CLIENT_ID']

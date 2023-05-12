@@ -26,6 +26,15 @@ resource "aws_cognito_user_pool" "this" {
 
   }
 
+ account_recovery_setting {
+    recovery_mechanism {
+      name     = "verified_email"
+      priority = 1
+    }
+
+    
+  }
+
 }
 
 resource "aws_cognito_user_pool_client" "this" {

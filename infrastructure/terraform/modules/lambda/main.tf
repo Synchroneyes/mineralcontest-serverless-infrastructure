@@ -1,10 +1,10 @@
 #tfsec:ignore:aws-lambda-enable-tracing
 resource "aws_lambda_function" "this" {
-  filename         = "${var.file_path}/${var.file_name}.zip"
+  filename         = data.archive_file.lambda.output_path
   function_name    = var.function_name
   handler          = "${split(".", var.file_name)[0]}.${var.function_handler}"
   runtime          = var.function_runtime
-  source_code_hash = filesha256("${var.file_path}/${var.file_name}")
+  source_code_hash = filesha256(data.archive_file.lambda.output_path)
   timeout          = var.function_timeout
   role             = aws_iam_role.this.arn
 
@@ -21,9 +21,6 @@ resource "aws_lambda_function" "this" {
     variables = var.function_environment_variables
   }
 
-  depends_on = [
-    null_resource.compression
-  ]
 }
 
 resource "aws_lambda_permission" "api-gateway-invoke-lambda" {
@@ -54,25 +51,9 @@ resource "aws_iam_role" "this" {
 EOF
 }
 
-resource "null_resource" "compression" {
-  triggers = {
-    always_run = "${timestamp()}"
-  }
-
-  provisioner "local-exec" {
-    command = "cd ${var.file_path}; zip ${var.file_name}.zip ${var.file_name}"
-  }
+data "archive_file" "lambda" {
+  type = "zip"
+  source_file = "${var.file_path}/${var.file_name}"
+  output_path = "${var.file_path}/${var.file_name}.zip"
 }
-resource "null_resource" "clear_zip" {
-  depends_on = [
-    aws_lambda_function.this
-  ]
 
-  triggers = {
-    always_run = "${timestamp()}"
-  }
-
-  provisioner "local-exec" {
-    command = "rm ${var.file_path}/${var.file_name}.zip"
-  }
-}
