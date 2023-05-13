@@ -43,16 +43,37 @@ resource "aws_lambda_permission" "this" {
   source_arn = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:${var.api_gateway_id}/*/${var.method}${aws_api_gateway_resource.this.path}"
 }
 
-resource "aws_api_gateway_method_response" "this" {
+resource "aws_api_gateway_method_response" "without_authorizer" {
+  count = var.cognito_authorizer_enable ? 0 : 1
   resource_id = aws_api_gateway_resource.this.id
   rest_api_id = var.api_gateway_id
-  http_method = var.method
+  http_method = aws_api_gateway_method.without_authorizer[0].http_method
   status_code = 200
 }
 
-resource "aws_api_gateway_integration_response" "this" {
+resource "aws_api_gateway_method_response" "with_authorizer" {
+  count = var.cognito_authorizer_enable ? 1 : 0
   resource_id = aws_api_gateway_resource.this.id
   rest_api_id = var.api_gateway_id
-  http_method = var.method
-  status_code = aws_api_gateway_method_response.this.status_code
+  http_method = aws_api_gateway_method.with_authorizer[0].http_method
+  status_code = 200
+}
+
+
+resource "aws_api_gateway_integration_response" "with_authorizer" {
+  count = var.cognito_authorizer_enable ? 1 : 0
+  resource_id = aws_api_gateway_resource.this.id
+  rest_api_id = var.api_gateway_id
+  http_method = aws_api_gateway_method_response.with_authorizer[0].http_method
+  status_code = aws_api_gateway_method_response.with_authorizer[0].status_code
+  depends_on = [ aws_api_gateway_integration.this ]
+}
+resource "aws_api_gateway_integration_response" "without_authorizer" {
+  count = var.cognito_authorizer_enable ? 0 : 1
+  resource_id = aws_api_gateway_resource.this.id
+  rest_api_id = var.api_gateway_id
+  http_method = aws_api_gateway_method_response.without_authorizer[0].http_method
+  status_code = aws_api_gateway_method_response.without_authorizer[0].status_code
+
+  depends_on = [ aws_api_gateway_integration.this ]
 }

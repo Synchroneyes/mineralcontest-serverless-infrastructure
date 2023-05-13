@@ -1,5 +1,4 @@
 resource "aws_api_gateway_rest_api" "this" {
-  # body = data.template_file.swagger.rendered
   name = "test-swagger-apigateway"
 
   lifecycle {
@@ -58,21 +57,5 @@ module "api_method_register" {
   lambda_name = module.lambda_cognito_register.name
 
 }
-
-
-
-# data "template_file" "swagger" {
-#   template = file("../swagger/api-gateway.yml")
-
-#   vars = {
-#     "region"           = local.aws_config.region
-#     "login_lambda_arn" = module.lambda_cognito_login.arn
-#     "me_lambda_arn" = module.lambda_cognito_authorizer_handler.arn
-#     "register_lambda_arn" =  module.lambda_cognito_register.arn
-#     "cognito_user_pool_arn" = module.authentification.cognito_pool_id
-#     "cognito_authorizer_name" = aws_api_gateway_authorizer.this.id
-#   }
-
-# }
 
 

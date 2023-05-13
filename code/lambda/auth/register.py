@@ -2,13 +2,35 @@ import boto3
 import os
 
 
+
 def lambda_handler(event, context):
     client = boto3.client('cognito-idp')
+    
+    if 'email' not in event:
+        return {
+            'statusCode': 400,
+            'body': 'ERROR_EMAIL_NOT_PROVIDED'
+         }
+    
+    if 'username' not in event:
+        return {
+        'statusCode': 400,
+        'body': 'ERROR_USERNAME_NOT_PROVIDED'
+    }
+    
+    if 'password' not in event:
+        return {
+        'statusCode': 400,
+        'body': 'ERROR_PASSWORD_NOT_PROVIDED'
+    }
+    
+    
     email = event['email']
     username = event['username']
     password = event['password']
 
     try:
+        
         response = client.sign_up(
             ClientId=os.environ['COGNITO_CLIENT_ID'],
             Username=username,
@@ -21,14 +43,20 @@ def lambda_handler(event, context):
             ]
         )
 
-        print(response)
         return {
             'statusCode': 200,
-            'body': 'User added successfully'
+            'body': 'USER_SUCESSFULLY_CREATED'
         }
+        
+    except client.exceptions.UsernameExistsException as e:
+        return {
+            'statusCode': 400,
+            'body': 'ERROR_USER_ALREADY_EXISTS'
+        }
+    
+        
     except Exception as e:
-        print(e)
         return {
             'statusCode': 500,
-            'body': 'Failed to add user'
+            'body': "error"
         }

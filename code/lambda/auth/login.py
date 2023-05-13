@@ -14,13 +14,20 @@ def lambda_handler(event, context):
             },
             ClientId=os.environ['COGNITO_CLIENT_ID']
         )
-    except Exception as e:
+        
+    
+    except client.exceptions.UserNotConfirmedException as e:
         return {
             'statusCode': 400,
-            'body': str(e)
+            'body': 'ERROR_EMAIL_NOT_CONFIRMED'
+        }
+    except client.exceptions.NotAuthorizedException as e:
+        return {
+            'statusCode': 400,
+            'body': 'ERROR_USERNAME_OR_PASSWORD_INVALID'
         }
     else:
         return {
             'statusCode': 200,
-            'body': response
+            'body': response['AuthenticationResult']['IdToken']
         }
