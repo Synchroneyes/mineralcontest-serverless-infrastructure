@@ -7,3 +7,9 @@ cognito_client_callback_url: ["https://example.com", "https://example.com/test"]
 cognito_client_redirect_uri: "https://example.com/auth_success"
 cognito_client_read_attributes: ["email"]
 cognito_client_write_attributes: ["email"]
+
+# S3
+s3_maps_bucket_name: "mineralcontestmaps"
+
+# DynamoDB
+

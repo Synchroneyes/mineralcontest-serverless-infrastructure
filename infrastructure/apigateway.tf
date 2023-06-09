@@ -58,4 +58,22 @@ module "api_method_register" {
 
 }
 
+resource "aws_api_gateway_resource" "maps" {
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  parent_id = aws_api_gateway_rest_api.this.root_resource_id
+  path_part = "maps"
+}
 
+module "api_method_maps_upload" {
+  source = "./modules/apimethod"
+  region = local.aws_config.region
+  api_gateway_id = aws_api_gateway_rest_api.this.id
+  cognito_authorizer_enable = true
+  cognito_authorizer_id = aws_api_gateway_authorizer.this.id
+  lambda_invoke_url = module.lambda_maps_upload.invoke_arn
+  parent_resource_id = aws_api_gateway_resource.maps.id
+  path = "upload"
+  method = "POST"
+  lambda_name = module.lambda_maps_upload.name
+
+}
