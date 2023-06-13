@@ -1,7 +1,4 @@
 name: Deploiement sur github
-
-
-
 # run when a commit is pushed to "source" branch
 on:
   push:
@@ -27,15 +24,13 @@ jobs:
 
     # build website
     - name: Build
-      run: hugo --baseURL https://beta.mc.monvoisin-kevin.fr/ --source 
-code/frontend/themes/dopetrope/mineralcontest
+      run: hugo --baseURL https://beta.mc.monvoisin-kevin.fr/ --source code/frontend/themes/dopetrope/mineralcontest
 
     # push the generated content into the `main` (former `master`) branch.
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.TOKEN_GITHUB }}
-        publish_branch: pages # if your main branch is `master` use that 
-here.
+        publish_branch: pages # if your main branch is `master` use that here.
         publish_dir: ./public
         cname: beta.mc.monvoisin-kevin.fr
