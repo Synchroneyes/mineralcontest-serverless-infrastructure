@@ -10,8 +10,6 @@ disqusid = "4"
 hidesidebar = true
 +++
 
-# Comment installer le plugin?
-
 ## Sommaire 
 
 1. Informations importantes
