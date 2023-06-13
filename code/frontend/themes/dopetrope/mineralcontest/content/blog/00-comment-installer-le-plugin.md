@@ -6,7 +6,6 @@ date = "13/06/2023"
 slug = "installer-le-plugin"
 author = "Synchroneyes"
 draft = false
-disqusid = "4"
 hidesidebar = true
 +++
 
@@ -35,7 +34,7 @@ Sur le serveur où est héberger le serveur Minecraft, que ça soit votre propre
 Rendez-vous sur la page de téléchargement de fichiers présent [ici](/files/) et choisissez la version que vous désirez installer.
 Vous trouverez un tableau similaire à celui présent ci-dessous: <br />
 |Type| Version | Type de serveur | Version de serveur |
-|--|--|--|--
+|--|--|--|--|
 | Type de plugin, prenez un type Plugin | Version du plugin, la plus élevée vous offre la dernière version disponible | Le type de serveur, généralement Spigot | La version du serveur que vous utilisez. Notez qu'une version inférieur peut inclure des anciens bugs/problèmes |
 
 ⚠️ Il est également important de noter que l'équipe Mineral Contest n'apportera aucun support sur une version qui n'est pas la dernière disponible. ⚠️
@@ -46,3 +45,5 @@ C'est très simple, il vous suffit de placer le fichier `MineralContest.jar` dan
 Relancez ensuite le serveur.
 
 ### 5. Configuration
+
+WIP
