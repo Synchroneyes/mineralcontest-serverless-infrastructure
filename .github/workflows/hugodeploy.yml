@@ -32,6 +32,5 @@ jobs:
       with:
         github_token: ${{ secrets.TOKEN_GITHUB }}
         publish_branch: pages # if your main branch is `master` use that here.
-        publish_dir: /code/frontend/themes/dopetrope/mineralcontest/public
-
+        publish_dir: ./code/frontend/themes/dopetrope/mineralcontest/public
         cname: beta.mc.monvoisin-kevin.fr
