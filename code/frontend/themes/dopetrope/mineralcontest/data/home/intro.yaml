@@ -1,0 +1,19 @@
+sections:
+- icon: 'fa-cog'
+  title: 'Open-source'
+  description: 'Le plugin est open-source. Ce qui implique que si tu souhaites ajouter de nouvelles fonctionnalités, fixer un bug que tu as rencontré ou que tu es simplement curieux, le code source est disponible gratuitement et publiquement!'
+
+- icon: 'fa-flash'
+  title: 'Communautaire'
+  description: "Le plugin repose sur sa communauté! C'est la communauté qui crée les cartes. Si tu as une idée de monde et qu\'elle n'existe pas encore, alors crées-le! Tu pourras ensuite le partager pour être ajouté au plugin!"
+
+- icon: 'fa-star'
+  title: 'Populaire'
+  description: "Mineral Contest est un plugin populaire, depuis la mise à disposition de ce plugin en 2020, il compte aujourd\'hui plus de 85.000 téléchargements!"
+
+buttons:
+- link: '#'
+  text: 'Télécharger la dernière version'
+
+- link: '/blog/'
+  text: 'À propos'

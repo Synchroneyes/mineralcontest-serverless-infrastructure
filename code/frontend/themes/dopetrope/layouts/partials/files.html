@@ -1,0 +1,32 @@
+<!-- Files -->
+<section id="files">
+    <header class="major">
+        <h2>{{ .title }}</h2>
+    </header>
+    <div class="row">
+        <div class="12u 12u(mobile)">
+            <section class="box">
+                <table class="table">
+                    <thead>
+                        <th>Type</th>
+                        <th>Version</th>
+                        <th>Type de serveur</th>
+                        <th>Version de serveur</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        {{ range .paginator.Pages }}
+                        <tr>
+                            <td>{{ .Params.file_type}}</td>
+                            <td>{{ .Params.plugin_version}}</td>
+                            <td>{{ .Params.server_type}} </td>
+                            <td>{{ .Params.server_version}}</td>
+                            <td><a href="{{ .Params.downloadurl }}" class="button_dl_small icon fa-download"> &nbsp;Télécharger</a> &nbsp; &nbsp;<a href="{{ .Permalink }}" class="icon fa-eye"> &nbsp;Plus d'informations</a></td>
+                        </tr>
+                        {{ end }}
+                    </tbody>
+                </table>
+            </section>
+        </div>       
+    </div>
+</section>

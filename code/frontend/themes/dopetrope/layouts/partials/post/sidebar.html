@@ -1,0 +1,40 @@
+
+<!-- Sidebar -->
+
+{{ if eq .Params.sidebar_type "map"}}
+<section class="box">
+    <header>
+        <h3>{{ .Params.title }}</h3>
+    </header>
+    <p>Ajouté par {{.Params.author}} le {{.Params.published_date}}  <br/>
+    
+    Taille de la carte: {{.Params.map_size}} </p>    
+    <footer>
+    <a href="{{ .Params.map_downloadurl}}" class="button alt">Télécharger</a>
+    </footer>
+</section>
+
+<section class="box">
+    <header>
+        <h3>Tags</h3>
+    </header>
+    {{ range .Params.tags}}
+    <span class="badge">{{.}}</span>
+    {{end}}
+</section>
+{{ end }}
+
+{{ if eq .Params.sidebar_type "file"}}
+<section class="box">
+
+    <p>Ajouté par {{.Params.author}} le {{.Params.published_date}}. <br />
+    Ce fichier est compatible avec: <b>{{.Params.server_type}} {{.Params.server_version}}</b><br />
+    Taille du fichier: {{.Params.file_size}} </p>    
+    {{ range .Params.tags}}
+    <span class="badge">{{.}}</span>
+    {{end}}
+    <footer>
+    <a href="{{ .Params.downloadurl}}" class="button alt">Télécharger</a>
+    </footer>
+</section>
+{{ end }}

@@ -1,0 +1,24 @@
+{
+  "name": "hugo-theme-dopetrope",
+  "version": "4.4.0",
+  "description": "Hugo Theme Dopetrope",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd exampleSite && hugo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curtiscde/hugo-theme-dopetrope.git"
+  },
+  "keywords": [
+    "hugo",
+    "hugo-theme",
+    "dopetrope"
+  ],
+  "author": "Curtis Timson",
+  "license": "Creative Commons Attribution",
+  "bugs": {
+    "url": "https://github.com/curtiscde/hugo-theme-dopetrope/issues"
+  },
+  "homepage": "https://github.com/curtiscde/hugo-theme-dopetrope#readme"
+}

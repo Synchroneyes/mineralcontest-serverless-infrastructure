@@ -1,0 +1,23 @@
+languageCode = "en-us"
+title = "Mineral Contest - par Synchroneyes"
+baseURL = "http://localhost:1313/"
+theme = "../.."
+
+[params.maps]
+    title = "Maps"
+    foldername = "maps"
+    viewalltext = "Voir toutes les cartes"
+
+[params.blog]
+    title = "Blog"
+    viewalltext = "Voir tout les articles"
+    foldername = "blog"
+
+[params.files]
+    title = "Fichiers"
+    foldername = "files"
+    viewalltext = "Voir tout les fichiers"
+
+[params.settings]
+    googleanalytics = ""
+    disqus = ""

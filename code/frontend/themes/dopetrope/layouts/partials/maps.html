@@ -1,0 +1,26 @@
+<!-- Portfolio -->
+<section id="faq">
+    <header class="major">
+        <h2>{{ .title }}</h2>
+    </header>
+    <div class="row">
+        {{ range .paginator.Pages }}
+        <div class="6u 12u(mobile)">
+            <section class="box">
+                <a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.thumbnail }}" alt="" /></a>
+                <header>
+                    <h3>{{ .Title }}</h3>
+                    <p>Publié le {{ .Params.published_date }}</p>
+                </header>
+                <p>{{ .Content | safeHTML | chomp | truncate 100 }}</p>
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{{ .Params.map_downloadurl }}" class="button_dl icon fa-download">&nbsp;Télécharger</a></li>
+                        <li><a href="{{ .Permalink }}" class="button icon fa-file-text">Informations</a></li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        {{ end }}
+    </div>
+</section>

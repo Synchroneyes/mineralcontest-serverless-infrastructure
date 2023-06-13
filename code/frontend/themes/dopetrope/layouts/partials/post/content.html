@@ -1,0 +1,42 @@
+<!-- Content -->
+
+{{ if eq .Params.content_type "file"}}
+<article class="box post">
+    <a href="#" class="image featured"><img src="{{ .Params.image }}" alt="" /></a>
+    <header>
+        <h2>{{ .Params.file_type }} {{.Params.plugin_version}}</h2>
+        <h3>Publié le {{.Params.published_date}}</h3>
+    </header>
+    {{ .Content }}
+</article>
+
+{{ end }}
+
+{{ if eq .Params.content_type "map"}}
+<article class="box post">
+    <a href="#" class="image featured"><img src="{{ .Params.image }}" alt="" /></a>
+    <header>
+        <h2>{{ .Title }}</h2>
+        {{ if not .Date.IsZero }}
+        <p>Posted {{ .Date.Format "2 Jan 2006" }}</p>
+        {{ end }}
+    </header>
+    {{ .Content }}
+</article>
+
+{{ end }}
+
+{{ if eq .Params.content_type "blog"}}
+<article class="box post">
+    <a href="#" class="image featured"><img src="{{ .Params.image }}" alt="" /></a>
+    <header>
+        <h2>{{ .Title }}</h2>
+        {{ if not .Date.IsZero }}
+        <p>Posted {{ .Date.Format "2 Jan 2006" }}</p>
+        {{ end }}
+    </header>
+    {{ .Content }}
+</article>
+
+{{ end }}
+
