@@ -2,7 +2,7 @@
 content_type = "blog"
 title = "Comment installer le plugin ?"
 description = "Un tutoriel pas à pas pour pouvoir installer le plugin."
-date = "2017-12-25T00:00:00"
+date = "13/06/2023"
 slug = "installer-le-plugin"
 author = "Synchroneyes"
 draft = false
@@ -12,12 +12,12 @@ hidesidebar = true
 
 ## Sommaire 
 
-1. Informations importantes
-2. Pré-requis
-3. Téléchargement
-4. Installation
-5. Configuration
-6. Vidéo explicative
+- Informations importantes
+- Pré-requis
+- Téléchargement
+- Installation
+- Configuration
+- Vidéo explicative
 
 ### 1. Informations importantes
 Avant toute chose, il est très important de noter les éléments suivants: <br />
