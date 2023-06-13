@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://beta.mc.monvoisin-kevin.fr/blog/</loc>
-    <lastmod>2017-12-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://beta.mc.monvoisin-kevin.fr/blog/installer-le-plugin/</loc>
-    <lastmod>2017-12-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://beta.mc.monvoisin-kevin.fr/</loc>
-    <lastmod>2017-12-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/files/builder-1.0.0/</loc>
   </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/files/plugin-2.8.7/</loc>
@@ -19,7 +10,11 @@
   </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/tags/4-equipes/</loc>
   </url><url>
+    <loc>https://beta.mc.monvoisin-kevin.fr/blog/</loc>
+  </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/categories/</loc>
+  </url><url>
+    <loc>https://beta.mc.monvoisin-kevin.fr/blog/installer-le-plugin/</loc>
   </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/maps/egypte/</loc>
   </url><url>
@@ -28,6 +23,8 @@
     <loc>https://beta.mc.monvoisin-kevin.fr/tags/fun/</loc>
   </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/maps/</loc>
+  </url><url>
+    <loc>https://beta.mc.monvoisin-kevin.fr/</loc>
   </url><url>
     <loc>https://beta.mc.monvoisin-kevin.fr/maps/nuketown/</loc>
   </url><url>
