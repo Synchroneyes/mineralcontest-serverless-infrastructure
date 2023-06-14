@@ -39,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://beta.mc.monvoisin-kevin.fr/blog/configurer-le-plugin/</guid>
-      <description>Au sein du plugin MineralContest, il existe deux différentes façon de configurer le plugin. La première est les fichiers de configuration, la seconde est les commandes en jeu.
+      <description> Introduction Configuration générale Liste des commandes    Introduction Au sein du plugin MineralContest, il existe deux différentes façon de configurer le plugin. La première est les fichiers de configuration, la seconde est les commandes en jeu.
 Configuration générale Liste des commandes </description>
     </item>
     
@@ -60,13 +60,7 @@ La première étape est de télécharger le plugin spécialement conçu pour ça
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://beta.mc.monvoisin-kevin.fr/blog/installer-le-plugin/</guid>
-      <description>Sommaire &amp;ndash; Informations importantes
-&amp;ndash; Pré-requis
-&amp;ndash; Téléchargement
-&amp;ndash; Installation
-&amp;ndash; Configuration
-&amp;ndash; Vidéo explicative
-1. Informations importantes Avant toute chose, il est très important de noter les éléments suivants: ⚠️ Le plugin n&amp;rsquo;est pas compatible avec les hébergeurs gratuits tel que Aternos, Minestrator ou autre ⚠️
+      <description>1. Informations importantes 2. Pré-requis 3. Téléchargement 4. Installation 5. Configuration 6. Vidéo explicative      1. Informations importantes Avant toute chose, il est très important de noter les éléments suivants: ⚠️ Le plugin n&amp;rsquo;est pas compatible avec les hébergeurs gratuits tel que Aternos, Minestrator ou autre ⚠️
 Il est possible d&amp;rsquo;héberger un serveur sur son propre ordinateur, des tutoriels sont disponible sur YouTube. Il faut veiller à ouvrir ses ports réseaux sur sa box internet pour que vos amis puissent vous rejoindre.</description>
     </item>
     
