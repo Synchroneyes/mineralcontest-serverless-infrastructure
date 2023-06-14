@@ -31,9 +31,7 @@
     <a href="#" class="image featured"><img src="{{ .Params.image }}" alt="" /></a>
     <header>
         <h2>{{ .Title }}</h2>
-        {{ if not .Date.IsZero }}
-        <p>Posted {{ .Date.Format "2 Jan 2006" }}</p>
-        {{ end }}
+        <p>Article publié le {{.Params.published_date}} par {{.Params.author}}</p>
     </header>
     {{ .Content }}
 </article>

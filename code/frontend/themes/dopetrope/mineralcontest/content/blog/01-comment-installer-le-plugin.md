@@ -2,7 +2,7 @@
 content_type = "blog"
 title = "Comment installer le plugin ?"
 description = "Un tutoriel pas à pas pour pouvoir installer le plugin."
-date = "13/06/2023"
+published_date = "13/06/2023"
 slug = "installer-le-plugin"
 author = "Synchroneyes"
 draft = false
@@ -11,12 +11,17 @@ hidesidebar = true
 
 ## Sommaire 
 
-- Informations importantes
-- Pré-requis
-- Téléchargement
-- Installation
-- Configuration
-- Vidéo explicative
+-- Informations importantes
+
+-- Pré-requis
+
+-- Téléchargement
+
+-- Installation
+
+-- Configuration
+
+-- Vidéo explicative
 
 ### 1. Informations importantes
 Avant toute chose, il est très important de noter les éléments suivants: <br />
@@ -33,9 +38,11 @@ Sur le serveur où est héberger le serveur Minecraft, que ça soit votre propre
 
 Rendez-vous sur la page de téléchargement de fichiers présent [ici](/files/) et choisissez la version que vous désirez installer.
 Vous trouverez un tableau similaire à celui présent ci-dessous: <br />
+
 |Type| Version | Type de serveur | Version de serveur |
 |--|--|--|--|
 | Type de plugin, prenez un type Plugin | Version du plugin, la plus élevée vous offre la dernière version disponible | Le type de serveur, généralement Spigot | La version du serveur que vous utilisez. Notez qu'une version inférieur peut inclure des anciens bugs/problèmes |
+
 
 ⚠️ Il est également important de noter que l'équipe Mineral Contest n'apportera aucun support sur une version qui n'est pas la dernière disponible. ⚠️
 
@@ -46,4 +53,14 @@ Relancez ensuite le serveur.
 
 ### 5. Configuration
 
-WIP
+Ce plugin a été pensé afin d'être pratique et simple d'installation. Il n'y a aucune configuration nécessaire pour son bon fonctionnement. <br />
+
+Cependant, dans le cas où vous souhaitez le placer dans un serveur avec d'autres plugins et plusieurs mondes (non mineral-contest), il y a un paramètre à changer.
+
+Une fois le serveur démarré pour la première fois avec le plugin, dans le dossier `plugins` de votre serveur, un dossier `MineralContest` a été crée. À l'intérieur vous trouverez un dossier `config` puis un fichier `plugin_config.yaml`. Editez ce fichier avec un éditeur de texte, le bloc note suffit, et trouvez la ligne: `world_name: world`. Remplacez `world` par le nom du monde où vous souhaitez faire fonctionner le plugin. Si vous venez de créer un serveur dans le seul but de jouer à Mineral Contest, cette étape n'est pas nécessaire.
+
+Une fois cette étape accomplie, relancez le serveur.
+
+### 6. Vidéo explicative
+
+Une vidéo est disponible sur Youtube, rendez-vous sur ce lien [https://youtube.com/watch?v=abcerfd](https://youtube.com/watch?v=abcerfd)
