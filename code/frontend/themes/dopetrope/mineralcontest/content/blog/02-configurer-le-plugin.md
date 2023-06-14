@@ -9,6 +9,11 @@ draft = false
 hidesidebar = true
 +++
 
+{{< table_of_contents >}}
+
+
+## Introduction
+
 Au sein du plugin MineralContest, il existe deux différentes façon de configurer le plugin. La première est les fichiers de configuration, la seconde est les commandes en jeu.
 
 ## Configuration générale

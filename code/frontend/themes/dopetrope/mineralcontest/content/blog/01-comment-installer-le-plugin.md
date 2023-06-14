@@ -9,19 +9,9 @@ draft = false
 hidesidebar = true
 +++
 
-## Sommaire 
 
--- Informations importantes
+{{< table_of_contents >}}
 
--- Pré-requis
-
--- Téléchargement
-
--- Installation
-
--- Configuration
-
--- Vidéo explicative
 
 ### 1. Informations importantes
 Avant toute chose, il est très important de noter les éléments suivants: <br />
