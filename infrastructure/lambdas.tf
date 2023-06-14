@@ -63,3 +63,44 @@ module "lambda_maps_upload" {
     "S3_MAPS_BUCKET_NAME" = local.aws_config.s3_maps_bucket_name
   }
 }
+
+module "lambda_maps_get_details" {
+  source           = "./modules/lambda_custom_role"
+  region           = local.aws_config.region
+  function_runtime = "python3.8"
+  function_handler = "lambda_handler"
+  function_timeout = 900
+  file_path        = "../code/lambda/maps"
+  file_name        = "get_details.py"
+  function_name    = "mineralcontest-maps-get-details"
+  api_gateway_arn  = aws_api_gateway_rest_api.this.execution_arn
+  custom_role_arn = aws_iam_role.lambda_assume_role_dynamodb.arn
+
+}
+
+module "lambda_maps_get_download" {
+  source           = "./modules/lambda_custom_role"
+  region           = local.aws_config.region
+  function_runtime = "python3.8"
+  function_handler = "lambda_handler"
+  function_timeout = 900
+  file_path        = "../code/lambda/maps"
+  file_name        = "download.py"
+  function_name    = "mineralcontest-maps-get-download"
+  api_gateway_arn  = aws_api_gateway_rest_api.this.execution_arn
+  custom_role_arn = aws_iam_role.lambda_assume_role_dynamodb.arn
+}
+
+module "lambda_maps_get_image" {
+  source           = "./modules/lambda_custom_role"
+  region           = local.aws_config.region
+  function_runtime = "python3.8"
+  function_handler = "lambda_handler"
+  function_timeout = 900
+  file_path        = "../code/lambda/maps"
+  file_name        = "image.py"
+  function_name    = "mineralcontest-maps-get-image"
+  api_gateway_arn  = aws_api_gateway_rest_api.this.execution_arn
+  custom_role_arn = aws_iam_role.lambda_assume_role_dynamodb.arn
+}
+

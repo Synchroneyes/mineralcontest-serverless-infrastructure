@@ -2,15 +2,22 @@
 <!-- Sidebar -->
 
 {{ if eq .Params.sidebar_type "map"}}
+{{ $apiUrl := printf "%s%s%s" "https://mc.api.monvoisin-kevin.fr/maps/" .Params.map_name "/details"}}
+{{ $mapDetails := getJSON $apiUrl}}
+
 <section class="box">
     <header>
         <h3>{{ .Params.title }}</h3>
     </header>
     <p>Ajouté par {{.Params.author}} le {{.Params.published_date}}  <br/>
     
-    Taille de la carte: {{.Params.map_size}} </p>    
+    Taille de la carte: {{.Params.map_size}} <br/>
+    Nombre de téléchargement(s): {{$mapDetails.map_download_count}}
+    </p>  
+    
+    
     <footer>
-    <a href="{{ .Params.map_downloadurl}}" class="button alt">Télécharger</a>
+    <a href="{{ $mapDetails.map_url }} " class="button alt">Télécharger</a>
     </footer>
 </section>
 

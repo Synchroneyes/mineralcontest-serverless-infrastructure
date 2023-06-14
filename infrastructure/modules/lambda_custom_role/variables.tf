@@ -41,3 +41,8 @@ variable "api_gateway_arn" {
   type        = string
   description = "ARN of the api gateway to use"
 }
+
+variable "custom_role_arn" {
+  type = string
+  default = ""
+}
