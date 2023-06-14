@@ -14,7 +14,7 @@ def lambda_handler(event, context):
         'statusCode': 301,
         "headers": {
             "Location": presigned_url,
-            "Cache-Control": "max-age=604800"
+            "Cache-Control": "max-age=86400"
         },
         'body': json.dumps("Downloading {}".format(map_name))
     }

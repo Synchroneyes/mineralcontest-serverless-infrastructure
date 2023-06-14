@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.monvoisin-kevin.fr/file_downloads/workshop/image/2020-06-17-13-01.48-min-5ee9f859309cd847187341-5eea38f7b5ae0753275973-5eeba6da0ec0b291615907.png"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/nuketown/image"
 image = "https://mc.api.monvoisin-kevin.fr/maps/egypte/image"
 slug = "Egypte"
 author = "Pjgjg"
