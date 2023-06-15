@@ -7,12 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://beta.mc.monvoisin-kevin.fr/tags/fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bouselande</title>
+      <link>https://beta.mc.monvoisin-kevin.fr/maps/bouselande/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://beta.mc.monvoisin-kevin.fr/maps/bouselande/</guid>
+      <description>Bienvenue dans une expérience hilarante et nostalgique de Minecraft avec cette map de 4 équipes, où les maisons sont faites&amp;hellip; en bouse ! Prépare-toi à un retour aux sources et à revivre les souvenirs de tes débuts sur Minecraft, où la créativité et l&amp;rsquo;ingéniosité étaient essentielles.
+Cette map est un hommage amusant aux premières constructions rudimentaires que l&amp;rsquo;on pouvait réaliser dans le jeu. Chaque équipe dispose de sa propre zone de construction, où elles peuvent laisser libre cours à leur imagination pour créer des maisons uniques&amp;hellip; en bouse !</description>
+    </item>
+    
+    <item>
       <title>Egypte</title>
       <link>https://beta.mc.monvoisin-kevin.fr/maps/egypte/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://beta.mc.monvoisin-kevin.fr/maps/egypte/</guid>
       <description>Une carte atypique et unique crée par Pgjgj. Une seule question se pose, Oseras tu t&amp;rsquo;aventurer dans les limbes pharaoniques ?</description>
+    </item>
+    
+    <item>
+      <title>Lune</title>
+      <link>https://beta.mc.monvoisin-kevin.fr/maps/lune/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://beta.mc.monvoisin-kevin.fr/maps/lune/</guid>
+      <description>Bienvenue dans une expérience spatiale captivante avec cette carte représentant la Lune dans Minecraft ! Prépare-toi à une aventure extraterrestre unique et passionnante. Pour profiter pleinement de cette expérience, assure-toi d&amp;rsquo;activer les command blocks, car ils jouent un rôle crucial dans l&amp;rsquo;immersion et le gameplay de cette carte.
+Une fois les command blocks activés, tu seras instantanément transporté sur la surface de la Lune. Les paysages lunaires arides et dépourvus de végétation s&amp;rsquo;étendent à perte de vue.</description>
+    </item>
+    
+    <item>
+      <title>Mineral Houses</title>
+      <link>https://beta.mc.monvoisin-kevin.fr/maps/mineralhouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://beta.mc.monvoisin-kevin.fr/maps/mineralhouse/</guid>
+      <description>Bienvenue dans un monde merveilleux où les maisons en bois règnent en maîtres ! Cette carte Minecraft est une véritable ode à l&amp;rsquo;artisanat et à la beauté naturelle des maisons en bois. Dès que tu mets les pieds dans ce monde, tu es immédiatement enchanté par l&amp;rsquo;atmosphère chaleureuse et accueillante qui émane de chaque construction.
+Les paysages de cette carte sont parsemés de magnifiques forêts luxuriantes, où les arbres majestueux se dressent fièrement et fournissent une abondance de bois de qualité.</description>
+    </item>
+    
+    <item>
+      <title>Subnautica</title>
+      <link>https://beta.mc.monvoisin-kevin.fr/maps/subnautica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://beta.mc.monvoisin-kevin.fr/maps/subnautica/</guid>
+      <description>Bienvenue dans cette adaptation Minecraft captivante de l&amp;rsquo;univers de Subnautica ! Plonge dans les profondeurs mystérieuses de l&amp;rsquo;océan et découvre un monde subaquatique aussi riche que dangereux. Pour profiter pleinement de cette carte immersive, assure-toi d&amp;rsquo;activer les command blocks, car ils jouent un rôle essentiel dans l&amp;rsquo;expérience de jeu.
+Une fois les command blocks activés, tu seras instantanément transporté dans un océan à couper le souffle. Les vastes étendues d&amp;rsquo;eau cristalline s&amp;rsquo;étendent à perte de vue, avec une palette de couleurs éblouissantes allant des teintes turquoises aux profondeurs insondables du bleu.</description>
+    </item>
+    
+    <item>
+      <title>Volcano</title>
+      <link>https://beta.mc.monvoisin-kevin.fr/maps/volcano/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://beta.mc.monvoisin-kevin.fr/maps/volcano/</guid>
+      <description>Une map nether dans un style plutôt volcanique. Malheureusement la génération la rends injouable coté minerais, couplé la map a un plugin de random loot sur les blocks la rends plus fun a jouer.</description>
     </item>
     
   </channel>
