@@ -104,3 +104,16 @@ module "lambda_maps_get_image" {
   custom_role_arn = aws_iam_role.lambda_assume_role_dynamodb.arn
 }
 
+module "lambda_maps_get_thumbnail" {
+  source           = "./modules/lambda_custom_role"
+  region           = local.aws_config.region
+  function_runtime = "python3.8"
+  function_handler = "lambda_handler"
+  function_timeout = 900
+  file_path        = "../code/lambda/maps"
+  file_name        = "thumbnail.py"
+  function_name    = "mineralcontest-maps-get-thumbnail"
+  api_gateway_arn  = aws_api_gateway_rest_api.this.execution_arn
+  custom_role_arn = aws_iam_role.lambda_assume_role_dynamodb.arn
+}
+

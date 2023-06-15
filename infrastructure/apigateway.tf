@@ -118,3 +118,16 @@ module "api_method_maps_image" {
   method = "GET"
   lambda_name = module.lambda_maps_get_image.name
 }
+
+module "api_method_maps_thumbnail" {
+  source = "./modules/apimethod"
+  region = local.aws_config.region
+  api_gateway_id = aws_api_gateway_rest_api.this.id
+  cognito_authorizer_enable = false
+  lambda_invoke_url = module.lambda_maps_get_thumbnail.invoke_arn
+  parent_resource_id = aws_api_gateway_resource.maps_name.id
+  path = "thumbnail"
+  method = "GET"
+  lambda_name = module.lambda_maps_get_thumbnail.name
+}
+
