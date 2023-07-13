@@ -1,6 +1,7 @@
 resource "aws_api_gateway_rest_api" "this" {
-  name = "test-swagger-apigateway"
+  name = "mineralcontest-api"
 
+  binary_media_types = ["image/jpeg"]
   lifecycle {
     create_before_destroy = true
   }
@@ -107,27 +108,126 @@ module "api_method_maps_download" {
   lambda_name = module.lambda_maps_get_download.name
 }
 
-module "api_method_maps_image" {
-  source = "./modules/apimethod"
-  region = local.aws_config.region
-  api_gateway_id = aws_api_gateway_rest_api.this.id
-  cognito_authorizer_enable = false
-  lambda_invoke_url = module.lambda_maps_get_image.invoke_arn
-  parent_resource_id = aws_api_gateway_resource.maps_name.id
-  path = "image"
-  method = "GET"
-  lambda_name = module.lambda_maps_get_image.name
+resource "aws_api_gateway_resource" "maps_thumbnail" {
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  parent_id = aws_api_gateway_resource.maps_name.id
+  path_part = "thumbnail"
 }
 
-module "api_method_maps_thumbnail" {
-  source = "./modules/apimethod"
-  region = local.aws_config.region
-  api_gateway_id = aws_api_gateway_rest_api.this.id
-  cognito_authorizer_enable = false
-  lambda_invoke_url = module.lambda_maps_get_thumbnail.invoke_arn
-  parent_resource_id = aws_api_gateway_resource.maps_name.id
-  path = "thumbnail"
-  method = "GET"
-  lambda_name = module.lambda_maps_get_thumbnail.name
+resource "aws_api_gateway_method" "maps_thumbnail_get" {
+  resource_id = aws_api_gateway_resource.maps_thumbnail.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  http_method = "GET"
+  authorization = "NONE"
+
+  request_parameters = {
+    "method.request.path.mapname" = true
+  }
+}
+
+resource "aws_api_gateway_integration" "maps_thumbnail_get_integration_request" {
+  resource_id = aws_api_gateway_resource.maps_thumbnail.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  type = "AWS"
+  integration_http_method = "GET"
+  uri = "arn:aws:apigateway:${local.aws_config.region}:s3:path/${local.aws_config.s3_maps_bucket_name}/{mapname}/thumbnail.jpg"
+  http_method = aws_api_gateway_method.maps_thumbnail_get.http_method
+  credentials = "arn:aws:iam::982003693898:role/APIGatewayS3"
+  
+  passthrough_behavior    = "WHEN_NO_MATCH"
+
+  request_parameters = {
+    "integration.request.path.mapname" = "method.request.path.mapname"
+  }
+}
+
+
+resource "aws_api_gateway_method_response" "maps_thumbnail_get_method_response" {
+  resource_id = aws_api_gateway_resource.maps_thumbnail.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  http_method = aws_api_gateway_method.maps_thumbnail_get.http_method
+  status_code = "200"
+  response_parameters = {
+    "method.response.header.Content-Type" = true
+  }
+
+  response_models = {
+    "image/jpeg" = "Empty"
+  }
+}
+
+resource "aws_api_gateway_integration_response" "maps_thumbnail_get_integration_response" {
+  depends_on = [aws_api_gateway_method_response.maps_thumbnail_get_method_response]
+
+  resource_id = aws_api_gateway_resource.maps_thumbnail.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  http_method = aws_api_gateway_method.maps_thumbnail_get.http_method
+  status_code = "200"
+  response_parameters = {
+    "method.response.header.Content-Type" = "'image/jpeg'"
+  }
+
+  content_handling = "CONVERT_TO_BINARY"
+}
+
+
+# ---
+
+resource "aws_api_gateway_resource" "maps_image" {
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  parent_id = aws_api_gateway_resource.maps_name.id
+  path_part = "image"
+}
+
+resource "aws_api_gateway_method" "maps_image_get" {
+  resource_id = aws_api_gateway_resource.maps_image.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  http_method = "GET"
+  authorization = "NONE"
+
+  request_parameters = {
+    "method.request.path.mapname" = true
+  }
+}
+
+resource "aws_api_gateway_integration" "maps_image_get_integration_request" {
+  resource_id = aws_api_gateway_resource.maps_image.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  type = "AWS"
+  integration_http_method = "GET"
+  uri = "arn:aws:apigateway:${local.aws_config.region}:s3:path/${local.aws_config.s3_maps_bucket_name}/{mapname}/{mapname}.jpg"
+  http_method = aws_api_gateway_method.maps_image_get.http_method
+  credentials = "arn:aws:iam::982003693898:role/APIGatewayS3"
+  
+  passthrough_behavior    = "WHEN_NO_MATCH"
+
+  request_parameters = {
+    "integration.request.path.mapname" = "method.request.path.mapname"
+  }
+}
+
+
+resource "aws_api_gateway_method_response" "maps_image_get_method_response" {
+  resource_id = aws_api_gateway_resource.maps_image.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  http_method = aws_api_gateway_method.maps_image_get.http_method
+  status_code = "200"
+  response_parameters = {
+    "method.response.header.Content-Type" = true
+  }
+
+}
+
+resource "aws_api_gateway_integration_response" "maps_image_get_integration_response" {
+  depends_on = [ aws_api_gateway_method_response.maps_image_get_method_response ]
+  resource_id = aws_api_gateway_resource.maps_image.id
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  http_method = aws_api_gateway_method.maps_image_get.http_method
+  status_code = "200"
+  response_parameters = {
+    "method.response.header.Content-Type" = "'image/jpeg'"
+  }
+
+  content_handling = "CONVERT_TO_BINARY"
 }
 

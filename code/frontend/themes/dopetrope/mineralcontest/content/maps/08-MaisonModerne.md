@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/maisonmoderne/thumbnail"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/maisonmoderne/thumbnail_s3"
 image = "https://mc.api.monvoisin-kevin.fr/maps/maisonmoderne/image"
 slug = "maisonmoderne"
 author = "DelityLuss"

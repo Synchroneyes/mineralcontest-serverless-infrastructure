@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/lune/thumbnail"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/lune/thumbnail_s3"
 image = "https://mc.api.monvoisin-kevin.fr/maps/lune/image"
 slug = "lune"
 author = "Pgjgj"

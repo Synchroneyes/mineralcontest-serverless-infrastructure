@@ -10,6 +10,6 @@ cognito_client_write_attributes: ["email"]
 
 # S3
 s3_maps_bucket_name: "mineralcontestmaps"
-
+s3_maps_bucket_arn: "arn:aws:s3:::mineralcontestmaps"
 # DynamoDB
 

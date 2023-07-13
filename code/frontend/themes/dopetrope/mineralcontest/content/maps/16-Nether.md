@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/nether/thumbnail"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/nether/thumbnail_s3"
 image = "https://mc.api.monvoisin-kevin.fr/maps/nether/image"
 slug = "nether"
 author = "DelityLuss"

@@ -27,10 +27,11 @@ resource "aws_api_gateway_method" "without_authorizer" {
 resource "aws_api_gateway_integration" "this" {
   resource_id = aws_api_gateway_resource.this.id
   rest_api_id = var.api_gateway_id
-  type = "AWS"
+  type = "AWS_PROXY"
   http_method = var.method
   integration_http_method = "POST"
   uri = var.lambda_invoke_url
+  
 }
 
 resource "aws_lambda_permission" "this" {
