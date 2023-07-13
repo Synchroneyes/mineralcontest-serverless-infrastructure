@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/volcano/thumbnail_s3"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/volcano/thumbnail"
 image = "https://mc.api.monvoisin-kevin.fr/maps/volcano/image"
 slug = "volcano"
 author = "Pjgjg"

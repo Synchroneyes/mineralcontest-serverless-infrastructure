@@ -3,7 +3,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Nuketown"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/nuketown/thumbnail_s3"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/nuketown/thumbnail"
 image = "https://mc.api.monvoisin-kevin.fr/maps/nuketown/image"
 title = "Nuketown"
 slug = "nuketown"

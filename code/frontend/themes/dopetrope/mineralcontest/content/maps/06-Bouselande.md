@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/bouselande/thumbnail_s3"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/bouselande/thumbnail"
 image = "https://mc.api.monvoisin-kevin.fr/maps/bouselande/image"
 slug = "bouselande"
 author = "Synchroneyes"

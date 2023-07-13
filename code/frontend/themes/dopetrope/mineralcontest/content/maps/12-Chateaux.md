@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/chateau/thumbnail_s3"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/chateau/thumbnail"
 image = "https://mc.api.monvoisin-kevin.fr/maps/chateau/image"
 slug = "chateau"
 author = "DelityLuss"

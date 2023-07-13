@@ -4,7 +4,7 @@ sidebar_type = "map"
 content_type = "map"
 
 description = "Egypte, une carte pharaonique"
-thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/farwest/thumbnail_s3"
+thumbnail = "https://mc.api.monvoisin-kevin.fr/maps/farwest/thumbnail"
 image = "https://mc.api.monvoisin-kevin.fr/maps/farwest/image"
 slug = "farwest"
 author = "DelityLuss"
