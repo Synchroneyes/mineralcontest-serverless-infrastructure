@@ -2,7 +2,7 @@
 content_type = "blog"
 title = "Comment créer une carte"
 description = "Vous souhaitez créer une nouvelle carte et jouer dessus?"
-published_date = "14/06/2023"
+published_date = "14/6/2023"
 slug = "creer-une-carte"
 author = "Synchroneyes"
 draft = false

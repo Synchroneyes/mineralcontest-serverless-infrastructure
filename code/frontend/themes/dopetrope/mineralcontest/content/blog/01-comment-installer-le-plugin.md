@@ -2,7 +2,7 @@
 content_type = "blog"
 title = "Comment installer le plugin ?"
 description = "Un tutoriel pas à pas pour pouvoir installer le plugin."
-published_date = "13/06/2023"
+published_date = "13/6/2023"
 slug = "installer-le-plugin"
 author = "Synchroneyes"
 draft = false

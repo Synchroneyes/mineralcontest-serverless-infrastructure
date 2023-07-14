@@ -7,8 +7,17 @@
         {{ end }}
         <ul class="dates">
             {{ range first 5 (where .Site.RegularPages "Type" .Site.Params.Blog.foldername) }}
+            {{ $blogdate := split .Params.published_date "/" }}
+            {{ $month := index $blogdate 1 }}
+            {{ $monthNumber := int $month}}
+            {{ $monthNumber := sub $monthNumber 1}}
+            {{ $mois := slice "Janvier" "Février" "Mars" "Avril" "Mai" "Juin" "Juillet" "Août" "Septembre" "Octobre" "Novembre" "Décembre" }}
+            {{ $day := index $blogdate 0}}
+            {{ $year := index $blogdate 2}}
+
+            
             <li>
-                <span class="date">{{ .Date.Format "Jan" }} <strong>{{ .Date.Format "_2" }}</strong></span>
+                <span class="date">{{ index $mois $monthNumber }}  {{ $year }} <strong>{{ $day }}</strong></span>
                 <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                 <p>{{ .Description }}</p>
             </li>
