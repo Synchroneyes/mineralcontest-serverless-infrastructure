@@ -37,5 +37,14 @@ La première étape est de télécharger le plugin spécialement conçu pour ça
 Il est possible d&amp;rsquo;héberger un serveur sur son propre ordinateur, des tutoriels sont disponible sur YouTube. Il faut veiller à ouvrir ses ports réseaux sur sa box internet pour que vos amis puissent vous rejoindre.</description>
     </item>
     
+    <item>
+      <title>Liste des commandes</title>
+      <link>https://beta.mc.monvoisin-kevin.fr/blog/liste-des-commandes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://beta.mc.monvoisin-kevin.fr/blog/liste-des-commandes/</guid>
+      <description> Introduction    Introduction  </description>
+    </item>
+    
   </channel>
 </rss>
