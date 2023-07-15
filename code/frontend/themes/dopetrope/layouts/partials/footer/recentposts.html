@@ -6,12 +6,12 @@
         </header>
         {{ end }}
         <ul class="dates">
-            {{ range first 5 (where .Site.RegularPages "Type" .Site.Params.Blog.foldername) }}
+            {{ range sort (first 5 (where .Site.RegularPages "Type" .Site.Params.Blog.foldername)) "Params.published_date" "desc"}}
             {{ $blogdate := split .Params.published_date "/" }}
             {{ $month := index $blogdate 1 }}
             {{ $monthNumber := int $month}}
             {{ $monthNumber := sub $monthNumber 1}}
-            {{ $mois := slice "Janvier" "Février" "Mars" "Avril" "Mai" "Juin" "Juillet" "Août" "Septembre" "Octobre" "Novembre" "Décembre" }}
+            {{ $mois := slice "Janv." "Févr." "Mars" "Avri." "Mai" "Juin" "Juil." "Août" "Sept." "Octo." "Nove." "Déce." }}
             {{ $day := index $blogdate 0}}
             {{ $year := index $blogdate 2}}
 
