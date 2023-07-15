@@ -79,8 +79,8 @@ Cette map est un hommage amusant aux premières constructions rudimentaires que 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://beta.mc.monvoisin-kevin.fr/blog/configurer-le-plugin/</guid>
-      <description> Introduction Configuration générale Liste des commandes    Introduction Au sein du plugin MineralContest, il existe deux différentes façon de configurer le plugin. La première est les fichiers de configuration, la seconde est les commandes en jeu.
-Configuration générale Liste des commandes </description>
+      <description>Introduction Configuration du plugin Utilisation de MySQL Configuration du coffre d&amp;rsquo;arène Configuration d&amp;rsquo;une partie de Mineral Contest Configuration de l&amp;rsquo;équipement par défaut d&amp;rsquo;un joueur    Introduction  Au sein du plugin MineralContest, il existe deux différentes façon de configurer le plugin. La première est les fichiers de configuration, la seconde est les commandes en jeu.
+Configuration du plugin  Par défaut, le plugin est préconfiguré pour fonctionner sur un serveur qui vient tout juste d&amp;rsquo;être crée et ne requiert aucune configuration.</description>
     </item>
     
     <item>
