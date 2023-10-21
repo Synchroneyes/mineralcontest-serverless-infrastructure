@@ -23,8 +23,8 @@ EOF
 
 data "archive_file" "s3_map_download" {
   type        = "zip"
-  source_file = "../code/lambda/on_map_download.py"
-  output_path = "../code/lambda/on_map_download.zip"
+  source_file = "../code/lambda/maps/on_map_download.py"
+  output_path = "../code/lambda/maps/on_map_download.zip"
 }
 
 resource "aws_cloudwatch_event_target" "on_map_download" {
@@ -37,10 +37,10 @@ resource "aws_lambda_function" "on_map_download" {
   function_name    = "on_map_download"
   filename         = data.archive_file.s3_map_download.output_path
   handler          = "on_map_download.lambda_handler"
-  runtime          = "python3.10"
+  runtime          = "python3.9"
   source_code_hash = filesha256(data.archive_file.s3_map_download.output_path)
   timeout          = "10"
-  role             = aws_iam_role.s3_map_download.name
+  role             = aws_iam_role.s3_map_download.arn
 }
 
 resource "aws_iam_role" "s3_map_download" {
@@ -73,7 +73,15 @@ resource "aws_iam_policy" "s3_map_download" {
 			"Effect": "Allow",
 			"Action": "dynamodb:PutItem",
 			"Resource": "${aws_dynamodb_table.maps_download.arn}"
-		}
+		},
+        {
+            "Action": [
+                "logs:*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Sid": "Cloudwatch"
+        }
 	]
 }
 

@@ -28,7 +28,7 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': json.dumps({
-            "map_url": "https://mc.api.monvoisin-kevin.fr/maps/{}/download".format(map_name),
+            "map_url": "https://mineralcontestmaps.s3.eu-west-3.amazonaws.com/{}/{}.zip".format(map_name, map_name),
             "map_name": map_name,
             "map_description": "Une carte atypique et unique crée par Pgjgj. Une seule question se pose, Oseras tu t’aventurer dans les limbes pharaoniques ?",
             "map_size": "7759432",

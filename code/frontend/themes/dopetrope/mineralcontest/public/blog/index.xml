@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Mineral Contest - par Synchroneyes</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on Mineral Contest - par Synchroneyes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comment configurer le plugin?</title>
+      <link>http://localhost:1313/blog/configurer-le-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/configurer-le-plugin/</guid>
+      <description>Introduction Configuration du plugin Utilisation de MySQL Configuration du coffre d&amp;rsquo;arène Configuration d&amp;rsquo;une partie de Mineral Contest Configuration de l&amp;rsquo;équipement par défaut d&amp;rsquo;un joueur Introduction Au sein du plugin MineralContest, il existe deux différentes façon de configurer le plugin. La première est les fichiers de configuration, la seconde est les commandes en jeu.
+Configuration du plugin Par défaut, le plugin est préconfiguré pour fonctionner sur un serveur qui vient tout juste d&amp;rsquo;être crée et ne requiert aucune configuration.</description>
+    </item>
+    
+    <item>
+      <title>Comment créer une carte</title>
+      <link>http://localhost:1313/blog/creer-une-carte/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/creer-une-carte/</guid>
+      <description>Alors comme ça, vous vous sentez créatif et vous souhaitez contribuer au plugin en créant votre monde? C&amp;rsquo;est un processus assez simple! Vous avez également deux possibilités:
+Vous avez déjà créer votre map et vous souhaitez la faire fonctionner avec le plugin? Vous souhaitez créer votre map pour ensuite la faire fonctionner avec le plugin? Dans les deux cas listés plus haut, c&amp;rsquo;est totalement possible!
+La première étape est de télécharger le plugin spécialement conçu pour ça.</description>
+    </item>
+    
+    <item>
+      <title>Comment installer le plugin ?</title>
+      <link>http://localhost:1313/blog/installer-le-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/installer-le-plugin/</guid>
+      <description>1. Informations importantes 2. Pré-requis 3. Téléchargement 4. Installation 5. Configuration 6. Vidéo explicative 1. Informations importantes Avant toute chose, il est très important de noter les éléments suivants: ⚠️ Le plugin n&amp;rsquo;est pas compatible avec les hébergeurs gratuits tel que Aternos, Minestrator ou autre ⚠️
+Il est possible d&amp;rsquo;héberger un serveur sur son propre ordinateur, des tutoriels sont disponible sur YouTube. Il faut veiller à ouvrir ses ports réseaux sur sa box internet pour que vos amis puissent vous rejoindre.</description>
+    </item>
+    
+    <item>
+      <title>Liste des commandes</title>
+      <link>http://localhost:1313/blog/liste-des-commandes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/liste-des-commandes/</guid>
+      <description>Introduction Introduction </description>
+    </item>
+    
+  </channel>
+</rss>

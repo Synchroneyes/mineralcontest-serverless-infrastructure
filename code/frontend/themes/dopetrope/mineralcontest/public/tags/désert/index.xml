@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Désert on Mineral Contest - par Synchroneyes</title>
+    <link>http://localhost:1313/tags/d%C3%A9sert/</link>
+    <description>Recent content in Désert on Mineral Contest - par Synchroneyes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://localhost:1313/tags/d%C3%A9sert/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4 Teams</title>
+      <link>http://localhost:1313/maps/4teams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/maps/4teams/</guid>
+      <description>Bienvenue dans cette toute nouvelle map créée par Vezzen, spécialement conçue pour des affrontements épiques en équipes ! Cette carte est la première de la série et t&amp;rsquo;invite à plonger dans un environnement unique où quatre équipes s&amp;rsquo;affrontent pour la victoire.
+Dès ton arrivée, tu seras immédiatement immergé(e) dans une ambiance dynamique et palpitante. Les paysages variés de la map offrent une multitude de possibilités tactiques et stratégiques pour chaque équipe.</description>
+    </item>
+    
+    <item>
+      <title>Far West</title>
+      <link>http://localhost:1313/maps/farwest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/maps/farwest/</guid>
+      <description>Bienvenue dans le Far West ! Cette map t&amp;rsquo;invite à plonger dans l&amp;rsquo;univers mythique du Far West, avec ses vastes étendues désertiques, ses saloons animés et ses affrontements palpitants. Explore un environnement où la ruée vers l&amp;rsquo;or, les duels au soleil et l&amp;rsquo;esprit de l&amp;rsquo;aventure règnent en maîtres.
+Dès ton arrivée, tu seras transporté(e) dans un désert aride et impitoyable. Les dunes de sable s&amp;rsquo;étendent à perte de vue, créant un paysage désolé et mystérieux.</description>
+    </item>
+    
+    <item>
+      <title>Nether</title>
+      <link>http://localhost:1313/maps/nether/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/maps/nether/</guid>
+      <description>Bienvenue dans le Nether, un royaume infernal et dangereux où le feu, la lave et les créatures maléfiques règnent en maîtres. Cette map te plonge dans un environnement infernal, rempli de paysages sinistres et d&amp;rsquo;éléments caractéristiques du Nether.
+Dès ton arrivée, tu seras confronté(e) à un paysage sombre et chaotique. Les terres de soufre s&amp;rsquo;étendent à perte de vue, avec des montagnes de pierre de l&amp;rsquo;enfer qui se dressent menaçantes. Le ciel rougeoyant et les éclairs de foudre créent une atmosphère oppressante et inquiétante.</description>
+    </item>
+    
+  </channel>
+</rss>
