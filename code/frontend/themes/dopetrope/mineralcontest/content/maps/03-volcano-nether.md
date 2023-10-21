@@ -12,7 +12,6 @@ draft = false
 published_date = "15/06/2023"
 map_size = "43.58Mo"
 map_name = "volcano"
-map_downloadurl = "https://google.com"
 tags = ["4 Equipes", "Fun", "Chaos"]
 +++
 

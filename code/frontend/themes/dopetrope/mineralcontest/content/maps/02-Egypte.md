@@ -12,7 +12,6 @@ draft = false
 published_date = "13/06/2023"
 map_size = "12Mb"
 map_name = "egypte"
-map_downloadurl = "https://google.com"
 tags = ["4 Equipes", "Fun", "Unique"]
 +++
 
